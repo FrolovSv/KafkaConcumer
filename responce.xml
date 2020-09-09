@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Sber -->
+<SrvGetPaymentOrder xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="SrvGetPaymentOrder.xsd">
+	<header>
+			<messageID>0</messageID>
+			<processing>
+				<rqUid>00000000000000000000000000000000</rqUid>
+				<rqTime>2001-12-17T09:30:47Z</rqTime>
+				<SCName>OD</SCName>
+				<SPName>ECH</SPName>
+			</processing>
+	</header>
+	<responce>
+		<status>
+			<statusCode>0</statusCode>
+			<error>
+				<errorCode>0</errorCode>
+				<errorMessage>errorMessage</errorMessage>
+			</error>
+		</status>
+		<participantResults>
+			<participant>
+				<docInfo>
+					<docID>originator11.12.2012number</docID>
+					<paymentId>2121312313123</paymentId>
+				</docInfo>
+			</participant>
+		</participantResults>
+	</responce>
+</SrvGetPaymentOrder>

@@ -1,0 +1,9 @@
+kafka-topics.bat --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic out-topic
+
+kafka-topics.bat --zookeeper localhost:2181 --alter --topic out-topic --partitions 2
+
+my_kafka_run.cmd com.home.SimpleProducer out-topic (издатель)
+my_kafka_run.cmd com.home.SimpleConsumer out-topic testGroup01 client01 (первый подписчик)
+my_kafka_run.cmd com.home.SimpleConsumer out-topic testGroup01 client02 (второй подписчик)
+
+my_kafka_run.cmd com.home.SimpleConsumer out-topic testGroup02 client01
